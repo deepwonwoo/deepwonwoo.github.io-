@@ -5,17 +5,17 @@ gems:
   - jekyll-paginate
 exclude:
   - "/vendor/"
-title: 줌코딩의 코딩일기
-subtitle: Zoom in Coding
-email: gur5381@gmail.com
-name: Jinhyeok Jeong
-description: "Zoom in Coding from the Basic."
+title: Deepwonwoo
+subtitle: To the infinity and beyond
+email: deepwonwoo@kakao.com
+name: Wonwoo Choi
+description: "Deepwonwoo의 기술블로그"
 baseurl: ""
 url: https://deepwonwoo.github.io/
 plugins_dir:
   - jekyll-sitemap
-cover: "/assets/header_image.jpeg"
-logo: "/assets/Crewcials.jpeg"
+cover: "/assets/header_image.png"
+logo: "/assets/deepmind_logo.jpg"
 markdown: kramdown
 highlighter: rouge
 paginate: 5
@@ -39,16 +39,16 @@ descriptions:
 social:
   - name: GitHub
     icon: github
-    username: ZoomKoding
-    url: https://github.com/zoomkoding
+    username: deepwonwoo
+    url: https://github.com/deepwonwoo
     desc: Fork me on GitHub
     share: false
 protocols:
-  fb_image: "/assets/crewcials.jpeg"
+  fb_image: "/assets/deepmind_logo.jpg"
   fb_image_width: 612
   fb_image_height: 605
   fb_image_type: image/png
-  twitter_image: "/assets/crewcials.jpeg"
+  twitter_image: "/assets/deepmind_logo.jpg"
   os_repo: https://github.com/bencentra/centrarium.com
   os_rcs_type: git
   os_src: git@github.com:bencentra/centrarium.com.git
