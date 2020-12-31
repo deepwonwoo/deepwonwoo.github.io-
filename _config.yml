@@ -14,8 +14,8 @@ baseurl: ""
 url: https://deepwonwoo.github.io/
 plugins_dir:
   - jekyll-sitemap
-cover: "/assets/header_image.png"
-logo: "/assets/deepmind_logo.jpg"
+cover: "/assets/header_image.jpg"
+logo: "/assets/deepmind_logo.png"
 markdown: kramdown
 highlighter: rouge
 paginate: 5
