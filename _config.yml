@@ -31,7 +31,7 @@ jekyll-archives:
   permalinks:
     category: "/category/:name/"
     tag: "/tag/:name/"
-disqus_shortname: zoomKoding
+disqus_shortname: deepwonwoo
 ga_tracking_id: UA-83878761-1
 descriptions:
   - cat: jekyll
