@@ -31,11 +31,13 @@ jekyll-archives:
   permalinks:
     category: "/category/:name/"
     tag: "/tag/:name/"
+
 disqus_shortname: deepwonwoo
-ga_tracking_id: UA-83878761-1
+
 descriptions:
   - cat: jekyll
     desc: Posts describing Jekyll setup techniques.
+
 social:
   - name: GitHub
     icon: github
@@ -43,6 +45,7 @@ social:
     url: https://github.com/deepwonwoo
     desc: Fork me on GitHub
     share: false
+
 protocols:
   fb_image: "/assets/deepmind_logo.png"
   fb_image_width: 612
