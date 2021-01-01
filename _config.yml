@@ -44,7 +44,14 @@ social:
     username: deepwonwoo
     url: https://github.com/deepwonwoo
     desc: Fork me on GitHub
-    share: false
+    share: true
+
+  - name: Facebook
+    icon: facebook
+    username: wonwooddo
+    url: https://www.facebook.com/wonwooddo
+    desc: Friend me on Facebook
+    share: true
 
 protocols:
   fb_image: "/assets/deepmind_logo.png"
