@@ -46,13 +46,6 @@ social:
     desc: Fork me on GitHub
     share: true
 
-  - name: Facebook
-    icon: facebook
-    username: wonwooddo
-    url: https://www.facebook.com/wonwooddo
-    desc: Friend me on Facebook
-    share: true
-
 protocols:
   fb_image: "/assets/deepmind_logo.png"
   fb_image_width: 612
