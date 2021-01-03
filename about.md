@@ -9,8 +9,8 @@ main_nav: true
 
 항상 성장하는 개발자가 되고픈 최원우 입니다.
 
-이 블로그는 저의 성장을 돕기위해 공부 자료, 일상, 생각 등을 기록하는 공간입니다.
-남들에게도 도움이 되길 바라며 저에게 연락하시려면 [페메][facebook]이나 메일 주세요.
+이 블로그는 저의 공부 자료, 일상, 생각 등을 기록하는 공간입니다.
+저뿐만 아니라 남들에게도 도움이 되길 바랍니다.
 
 [github]: https://github.com/deepwonwoo
 [facebook]: https://www.facebook.com/wonwooddo
