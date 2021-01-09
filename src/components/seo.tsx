@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import { Image } from "../interfaces/FeaturedImage"
-import {configs} from '../../config';
+
 
 interface Props {
   title? : string,
@@ -50,8 +50,6 @@ const SEO = ({ title, description, image, article = false} : Props) => {
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
-      <meta name="google-site-verification" content={configs.google_site_verification} />
     </Helmet>
   )
 }
