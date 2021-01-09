@@ -4,9 +4,9 @@ module.exports = {
     description: `기록하는 습관 📝`,
     author: `Inkyung`,
     email : ``,
-    siteUrl : `https://6unhkui.github.io`,
+    siteUrl : `https://deepwonwoo.github.io/`,
     social : {
-      github : `https://github.com/6unhkui`,
+      github : `https://deepwonwoo.github.io/`,
       linkedin : `inkyung`
     },
     keywords : ['Java', 'Spring Framework', 'Javascript', 'React', 'Web Developer'],
