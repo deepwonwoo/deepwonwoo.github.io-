@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134826755-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-134826755-1');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RL opensource framework</title>
+  <meta name="description" content="딥러닝에 tensorflow, pytorch등이 있듯이 강화학습에도 여러 Framework들이 있다.">
+  
+  <meta name="author" content="Wonwoo Choi">
+  <meta name="copyright" content="&copy; Wonwoo Choi 2021">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="딥러닝에 tensorflow, pytorch등이 있듯이 강화학습에도 여러 Framework들이 있다." />
+  <meta property="og:url" content="https://deepwonwoo.github.io/" />
+  <meta property="og:site_name" content="Deepwonwoo" />
+  <meta property="og:title" content="RL opensource framework" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://deepwonwoo.github.io//assets/keyboard2.jpg" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RL opensource framework">
+  <meta name="twitter:description" content="딥러닝에 tensorflow, pytorch등이 있듯이 강화학습에도 여러 Framework들이 있다.">
+  <meta name="twitter:image" content="https://deepwonwoo.github.io//assets/keyboard2.jpg">
+  <meta name="twitter:url" content="https://deepwonwoo.github.io/">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://deepwonwoo.github.io//reinforcement/2021/01/03/rl-Framework.html">
+  <link rel="alternate" type="application/rss+xml" title="Deepwonwoo" href="https://deepwonwoo.github.io//feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/deepmind_logo.png" alt="Deepwonwoo">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/keyboard2.jpg);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">RL opensource framework</h1>
+      <p class="info">by <strong>deepwonwoo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+  <div class="post-date">January 3, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/reinforcement">Reinforcement</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>딥러닝에 tensorflow, pytorch등이 있듯이 강화학습에도 여러 Framework들이 있다.</p>
+
+<p>물론 배운 이론을 Scratch부터 구현하는것이 많은 공부가 될테지만, 그 시간에 그대보다 뛰어난 분들이 만든 코드를 분석하고 더 깊게 공부하는것이 좋다고 생한다. (Opensource 시대 아닌가)</p>
+
+<p>아래 표는 Catalyst team의 <a href="https://twitter.com/Scitator">Sergey Kolesnikov</a>가 <a href="https://docs.google.com/spreadsheets/d/1ZWhViAwCpRqupA5E_xFHSaBaaBZ1wAjO6PvmmEEpXGI/edit#gid=812627647">spreadsheet</a>에 정리한 RL opensource들을 참고하여 추가 작성한 것이다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Project</th>
+      <th>Maintainer</th>
+      <th>Framework</th>
+      <th>Stars</th>
+      <th>Rainbow</th>
+      <th>PPO</th>
+      <th>SAC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/catalyst-team/catalyst">Catalyst</a></td>
+      <td>Sergey Kolesnikov</td>
+      <td>PyTorch</td>
+      <td>2349</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/openai/baselines">OpenAI baselines</a></td>
+      <td>OpenAI</td>
+      <td>Tensorflow</td>
+      <td>10958</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/hill-a/stable-baselines">baselines</a></td>
+      <td>Antonin Raffin, Ashley Hill</td>
+      <td>Tensorflow</td>
+      <td>2734</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/ray-project/ray/tree/master/python/ray/rllib">Ray.rllib</a></td>
+      <td>Ray Team</td>
+      <td>Tensorflow</td>
+      <td>14250</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/tensorflow/agents">TF agents</a></td>
+      <td>Google</td>
+      <td>Tensorflow</td>
+      <td>1740</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/facebookresearch/Horizon">Horizon</a></td>
+      <td>Facebook</td>
+      <td>PyTorch</td>
+      <td>2733</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/NervanaSystems/coach">Coach</a></td>
+      <td>Intel</td>
+      <td>Tensorflow</td>
+      <td>1886</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/google/dopamine">Dopamine</a></td>
+      <td>Google</td>
+      <td>Tensorflow</td>
+      <td>9252</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/facebookresearch/ELF">ELF</a></td>
+      <td>Facebook</td>
+      <td>PyTorch</td>
+      <td>2011</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/keras-rl/keras-rl">keras-rl</a></td>
+      <td>Matthias Plappert</td>
+      <td>Tensorflow</td>
+      <td>4904</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/Kaixhin/Rainbow">Rainbow</a></td>
+      <td>Kai Arulkumaran</td>
+      <td>PyTorch</td>
+      <td>1078</td>
+      <td>✔️</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/rlworkgroup/garage">Garage</a></td>
+      <td>rlworkgroup</td>
+      <td>Tensorflow</td>
+      <td>1008</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://reagent.ai/">Reagent</a></td>
+      <td>facebook</td>
+      <td>PyTorch</td>
+      <td>2700</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/deepmind/acme">Acme</a></td>
+      <td>deepmind</td>
+      <td>Tensorflow</td>
+      <td>1800</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/tensorforce/tensorforce">Tensorforce</a></td>
+      <td>Google</td>
+      <td>Tensorflow</td>
+      <td>2800</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/rlgraph/rlgraph">RLgraph</a></td>
+      <td>RLgraph</td>
+      <td>pytorch</td>
+      <td>273</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/pfnet/pfrl">PFRL</a></td>
+      <td>pfnet</td>
+      <td>pytorch</td>
+      <td>469</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/deepwonwoo/SOTA-RL-Algorithms">SOTA-RL-Algorithms</a></td>
+      <td>quantumiracle</td>
+      <td>pytorch</td>
+      <td>218</td>
+      <td>❌</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://github.com/Curt-Park/rainbow-is-all-you-need">rainbow-is-all-you-need</a> / <a href="https://github.com/MrSyee/pg-is-all-you-need">pg-is-all-you-need</a></td>
+      <td>Curt, kyunghwan</td>
+      <td>pytorch</td>
+      <td>869/324</td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>요즘 딥러닝을 할때면, data가 image라면 CNN계열, timeseries라면 rnn계열을 쓰는게 일반적이고(요즘은 attention이 다 씹어먹고 있는듯 하지만..),  Framework도 특별한 이유가 아니고서야 Pytorch아니면 tensorflow를 쓴다.</p>
+
+<p>강화학습은 머신러닝에서도 가장 발전되지 않았고 아직 학계에서도 활발히 연구중인 분야이기 때문에 아직 잘 알려진 rule of thumb이 없다.  (논문들을 보면 검증은 커녕 benchmark도 다 제각각이고 용어, 알고리즘들도 체계적이지 않다. 그렇기에 참 매력적이고 가능성이 많은 분야인거 같다.)</p>
+
+<p>RL Framework들도 찾아보면 초기 딥러닝때와 같이 굉장히 다양하며, 각기 다른 철학과 용도에 따라 각 기관에서 개발되고 배포되고 있다. 따라서 자신에게 맞는 취향과 목적에 맞는 Framework를 선택하여 사용하기를 추천한다.</p>
+
+<p>아래는 필자가 직접 사용해보았던 Framework들의 느낀점을 적어 보았다.</p>
+
+<h2 id="rayrllibhttpsgithubcomray-projectraytreemasterpythonrayrllib"><a href="https://github.com/ray-project/ray/tree/master/python/ray/rllib">Ray.rllib</a></h2>
+
+<ul>
+  <li>
+    <p><a href="https://docs.ray.io/en/master/rllib.html">RLlib</a>은 분산 컴퓨팅을위한 Python 라이브러리 인 <a href="https://ray.io/">Ray의</a> 일부이다. Ray는 2018년 UC Berkeley의 <a href="https://rise.cs.berkeley.edu/">RISELab</a>에서 개발된 프로젝트이며, 이 연구실에서 Apache Spark가 만들어 졌다. Ray Core를 기반으로 RLlib뿐만 아니라 하이퍼파라미터 최적화 라이브러리라 <a href="https://docs.ray.io/en/master/tune/index.html">Tune</a>, Scalable Ray를 위한 <a href="https://docs.ray.io/en/master/cluster/index.html">Ray Cluster</a>, 분산 딥러닝 라이브러리인 <a href="https://docs.ray.io/en/master/raysgd/raysgd.html">RaySGD</a> 등 여러 기능들이 있다.  이 연구실 출신 핵심 개발자들이 <a href="https://www.anyscale.com/">Anyscale</a>이라는 회사를 차려 RAY에 대한 교육 및 기능 업그레이드를 통해 영향력을 계속 확장하고 있다.</p>
+  </li>
+  <li>현재 가장 앞서가는 rl 프레임워크라 보인다. 주변에서 ray.rllib을 많이 추천하고 실제로 현업에서도 사용하고있다.</li>
+  <li>단점으로는 Ray Core를 이해해야하며 개인용도에 맞게 Agent를 cutomizing하기 어렵다고 한다.</li>
+</ul>
+
+<h2 id="catalysthttpsgithubcomcatalyst-teamcatalyst"><a href="https://github.com/catalyst-team/catalyst">Catalyst</a></h2>
+
+<ul>
+  <li>2018년부터  <a href="https://twitter.com/Scitator">Sergey Kolesnikov</a> 가 만들고 있는 딥러닝 연구개발용 pipeline 프레임워크이다. 여러 용도에 맞는 표준 pipeline을 제공하고 있고, 강화학습용 pipeline <a href="https://github.com/Scitator/catalyst-rl-framework">Catalyst.RL</a>도 꾸준히 업데이트 중이다. 꾸준히 NeurIPS tutorial/workshop 섹션에 참가하고 있다.</li>
+  <li>Sergey Kolesnikov의 <a href="https://youtu.be/1g6BpItJdJA">유튜브</a> 인터뷰를 보면 Catalyst.rl에 대한 자부심을 느낄수있다. (역시 강화학습의 고향은 러시아라는 건가…)</li>
+  <li>단점으로는 역시 catalyst project 전반의 철학을 이해해야 하고 쓰는 사람이 많지 않다…</li>
+</ul>
+
+<h2 id="keras-rlhttpsgithubcomkeras-rlkeras-rl"><a href="https://github.com/keras-rl/keras-rl">keras-rl</a></h2>
+
+<ul>
+  <li>필자가 썼던 첫번째 강화학습 Framework이다. keras밖에 모를때 keras로 구현한 github repository를 찾다가 발견했었는데, 코드 구성이 직관적이여서 customizing 하기도 좋다.</li>
+  <li>단점이라면 구현된 알고리즘들이 몇개 없는데 업데이트도 잘 안해주는거 같다.</li>
+</ul>
+
+<h2 id="sota-rl-algorithmshttpsgithubcomdeepwonwoosota-rl-algorithms"><a href="https://github.com/deepwonwoo/SOTA-RL-Algorithms">SOTA-RL-Algorithms</a></h2>
+
+<ul>
+  <li>다양한 버전의 SAC, PPO 가 구현되어 있으며, 병렬화 코드도 있다.</li>
+  <li>프레임워크라기 보단 그냥 구현체들을 모아둔거여서 직관적으로 구현되어 있다. 핵심모듈들만 잘 분석해서 내  용도에 맞게 커스터마이징해서 쓰기 편하다. 강추한다.</li>
+</ul>
+
+
+</article>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/rl">rl</a>,&nbsp;<a href="/tag/opensource">opensource</a>
+</section>
+
+
+
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/git/2021/01/02/github1.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">Git Tutorial</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'deepwonwoo';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//deepwonwoo.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Deepwonwoo</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:deepwonwoo@kakao.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">deepwonwoo@kakao.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/deepwonwoo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">deepwonwoo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<style>
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.333%;
+	height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+      url: 'https://vimeo.com/api/oembed.json?url='+url,
+      async: true,
+      success: function(response) {
+        if(response.video_id) {
+          id = response.video_id;
+          if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+          if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+          var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+          if(autoplay==1) theInnerHTML += '&autoplay=1';
+          if(loop==1) theInnerHTML += '&loop=1';
+          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+          el.innerHTML = theInnerHTML;
+        }
+      }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

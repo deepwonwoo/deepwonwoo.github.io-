@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Wonwoo Choi</title>
+        <description>Deepwonwoo의 기술블로그</description>
+        <link>https://deepwonwoo.github.io/</link>
+        <atom:link href="https://deepwonwoo.github.io//feed.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sun, 03 Jan 2021 12:00:00 +0900</lastBuildDate>
+        
+        <item>
+            <title>RL opensource framework</title>
+            
+            
+            <description>&lt;p&gt;딥러닝에 tensorflow, pytorch등이 있듯이 강화학습에도 여러 Framework들이 있다.&lt;/p&gt;
+
+</description>
+            
+            <pubDate>Sun, 03 Jan 2021 12:00:00 +0900</pubDate>
+            <link>https://deepwonwoo.github.io//reinforcement/2021/01/03/rl-Framework.html</link>
+            <guid isPermaLink="true">https://deepwonwoo.github.io//reinforcement/2021/01/03/rl-Framework.html</guid>
+        </item>
+        
+        <item>
+            <title>Git Tutorial</title>
+            
+            
+            <description>&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-git이란&quot;&gt;1. Git이란?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-개념&quot;&gt;2. 개념&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-기본-명령어&quot;&gt;3. 기본 명령어&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#init&quot;&gt;init&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#config&quot;&gt;config&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#status&quot;&gt;status&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#add&quot;&gt;add&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#commit&quot;&gt;commit&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#diff&quot;&gt;diff&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#log&quot;&gt;log&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#reset&quot;&gt;reset&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#revert&quot;&gt;revert&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-중급-명령어&quot;&gt;4. 중급 명령어&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#branch&quot;&gt;branch&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#checkout&quot;&gt;checkout&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#merge&quot;&gt;merge&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#pull&quot;&gt;pull&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#fetch&quot;&gt;fetch&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#push&quot;&gt;push&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+            
+            <pubDate>Sat, 02 Jan 2021 15:00:00 +0900</pubDate>
+            <link>https://deepwonwoo.github.io//git/2021/01/02/github1.html</link>
+            <guid isPermaLink="true">https://deepwonwoo.github.io//git/2021/01/02/github1.html</guid>
+        </item>
+        
+        <item>
+            <title>TIL_2</title>
+            
+            
+            <description>&lt;h2 id=&quot;magic-method&quot;&gt;마술 메서드(magic method)&lt;/h2&gt;
+
+</description>
+            
+            <pubDate>Sat, 02 Jan 2021 12:00:00 +0900</pubDate>
+            <link>https://deepwonwoo.github.io//til/2021/01/02/TIL.html</link>
+            <guid isPermaLink="true">https://deepwonwoo.github.io//til/2021/01/02/TIL.html</guid>
+        </item>
+        
+        <item>
+            <title>TIL_1</title>
+            
+            
+            <description>&lt;h2 id=&quot;jekyll&quot;&gt;지킬(Jekyll)&lt;/h2&gt;
+
+</description>
+            
+            <pubDate>Fri, 01 Jan 2021 12:00:00 +0900</pubDate>
+            <link>https://deepwonwoo.github.io//til/2021/01/01/TIL.html</link>
+            <guid isPermaLink="true">https://deepwonwoo.github.io//til/2021/01/01/TIL.html</guid>
+        </item>
+        
+    </channel>
+</rss>
